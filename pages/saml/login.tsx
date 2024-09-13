@@ -8,9 +8,16 @@ export default function Login() {
   const { id, audience, acsUrl, providerName, relayState, namespace } = router.query;
 
   const authUrl = namespace ? `/api/namespace/${namespace}/saml/auth` : '/api/saml/auth';
+
+  const DOMAINS = [
+    'cv-hashicorp.com',
+    'saml-hashicorp.com',
+    'spp20240912.com'
+  ]
+
   const [state, setState] = useState({
-    username: 'jackson',
-    domain: 'example.com',
+    username: 'test',
+    domain: DOMAINS[0],
     acsUrl: 'https://sso.eu.boxyhq.com/api/oauth/saml',
     audience: 'https://saml.boxyhq.com',
   });
@@ -146,9 +153,9 @@ export default function Login() {
                       className='select select-bordered'
                       onChange={handleChange}
                       value={state.domain}>
-                      <option value='spp20240912.com'>@spp20240912.com</option>
-                      <option value='saml-hashicorp.com'>@saml-hashicorp.com</option>
-                      <option value='cv-hashicorp.com'>@cv-hashicorp.com</option>
+                      {DOMAINS.map((domain, index) => (
+                        <option value={domain} key={index}>@{domain}</option>
+                      ))}
                     </select>
                   </div>
                   <div className='form-control col-span-2'>
