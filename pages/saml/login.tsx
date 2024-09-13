@@ -148,6 +148,7 @@ export default function Login() {
                       value={state.domain}>
                       <option value='saml-hashicorp.com'>@saml-hashicorp.com</option>
                       <option value='cv-hashicorp.com'>@cv-hashicorp.com</option>
+                      <option value='spp20240912.com'>@spp20240912.com</option>
                     </select>
                   </div>
                   <div className='form-control col-span-2'>
