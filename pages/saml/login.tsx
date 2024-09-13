@@ -147,7 +147,7 @@ export default function Login() {
                       onChange={handleChange}
                       value={state.domain}>
                       <option value='saml-hashicorp.com'>@saml-hashicorp.com</option>
-                      <option value='hashicorp.com'>@hashicorp.com</option>
+                      <option value='cv-hashicorp.com'>@cv-hashicorp.com</option>
                     </select>
                   </div>
                   <div className='form-control col-span-2'>
