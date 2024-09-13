@@ -39,3 +39,5 @@ yarn-error.log*
 key.pem
 public.crt
 .vscode
+
+commands.md
