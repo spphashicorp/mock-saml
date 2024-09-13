@@ -146,8 +146,8 @@ export default function Login() {
                       className='select select-bordered'
                       onChange={handleChange}
                       value={state.domain}>
-                      <option value='example.com'>@example.com</option>
-                      <option value='example.org'>@example.org</option>
+                      <option value='saml-hashicorp.com'>@saml-hashicorp.com</option>
+                      <option value='hashicorp.com'>@hashicorp.com</option>
                     </select>
                   </div>
                   <div className='form-control col-span-2'>
